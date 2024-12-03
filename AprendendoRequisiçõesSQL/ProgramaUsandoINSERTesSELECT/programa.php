@@ -12,7 +12,7 @@
     <input type="submit" value="Enviar">
     </form>
     <form action="" method="get">
-    <input type="submit" value="MOSTRAR"> 
+    <input type="submit" value="Mostrar"> 
     </form>
 </body>
 </html>
