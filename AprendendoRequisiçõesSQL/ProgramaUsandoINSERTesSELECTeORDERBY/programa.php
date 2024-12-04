@@ -24,7 +24,7 @@ include("connbanco.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     
-$stmt = $conn->prepare("SELECT * FROM tabela");
+$stmt = $conn->prepare("SELECT * FROM tabela ");
 $stmt->execute();
 $result = $stmt->get_result();
 $a = 1;
@@ -36,6 +36,8 @@ while($row = $result->fetch_assoc()) {
 }
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $insert = $_POST["insert"];
+    $data = date('m');
+    echo $data;
     $stmt = $conn->prepare("INSERT INTO tabela(id) VALUES ($insert)");
     $stmt->execute();
     

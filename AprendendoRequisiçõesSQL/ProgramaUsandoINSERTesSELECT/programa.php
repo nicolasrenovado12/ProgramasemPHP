@@ -29,14 +29,14 @@ $stmt->execute();
 $result = $stmt->get_result();
 $a = 1;
 while($row = $result->fetch_assoc()) {
-    echo $a . " id: " . $row["id"] . "<br>";
+    echo $a . " number: " . $row["numbers"] . "<br>";
     $a++;
 }
 
 }
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $insert = $_POST["insert"];
-    $stmt = $conn->prepare("INSERT INTO tabela(id) VALUES ($insert)");
+    $stmt = $conn->prepare("INSERT INTO tabela(numbers) VALUES ($insert)");
     $stmt->execute();
     
 }
